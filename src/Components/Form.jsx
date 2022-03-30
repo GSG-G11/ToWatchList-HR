@@ -1,26 +1,32 @@
 import {Component} from 'react';
 import movies from '../movies';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class Form extends Component {
     
     state = {
-
-    movie: {}
-        
+        movie: {}
     } 
 
     inputHandler(event){
-        const title = event.target.value;
+        const title = event.target.value;       
         this.setState({movie:{title, status:false}});
     }
 
     submitHandler(event){
         event.preventDefault();
-        movies.push(this.state.movie)
-        alert('New Book Submitted');
+        const {title} = this.state.movie;
+        if(title){
+            movies.push(this.state.movie);
+            toast.success(title +' has been added to the library');
+        }else{
+            toast.error('Please make sure your input is correct');
+        }
+        
     }
     render() {
-        console.log(movies)
         return (
+<><ToastContainer />
         <section className="header">
             <div className="form">
                 <h1 className="form_title">Add your Movie</h1>
@@ -31,7 +37,6 @@ class Form extends Component {
                 </form>
                 </div>
             </div>
-
             <div className="form">
                 <h1 className="form_title">Add your Movie</h1>
                 <div className="form_content"> 
@@ -40,8 +45,8 @@ class Form extends Component {
                 <button className="button" type="button">Add Movie</button>
                 </div>
             </div>
-
         </section>
+        </>
         );
     }
 }
