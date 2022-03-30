@@ -4,24 +4,22 @@ class Form extends Component {
     
     state = {
 
-    movie: {
-        title:'',
-        status:false
-    }
+    movie: {}
         
     } 
 
     inputHandler(event){
         const title = event.target.value;
-        this.setState({movie:{title}});
+        this.setState({movie:{title, status:false}});
     }
 
     submitHandler(event){
         event.preventDefault();
         movies.push(this.state.movie)
-        alert('New Book Sumbited');
+        alert('New Book Submitted');
     }
     render() {
+        console.log(movies)
         return (
         <section className="header">
             <div className="form">
