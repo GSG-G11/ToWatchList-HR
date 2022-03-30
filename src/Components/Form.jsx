@@ -1,9 +1,9 @@
 import {Component} from 'react';
-import movies from '../movies';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import movies from '../movies';
+
 class Form extends Component {
-    
     state = {
         movie: {}
     } 
@@ -25,8 +25,10 @@ class Form extends Component {
         
     }
     render() {
+
         return (
-<><ToastContainer />
+        <><ToastContainer />
+    <div className="modal">
         <section className="header">
             <div className="form">
                 <h1 className="form_title">Add your Movie</h1>
@@ -37,15 +39,8 @@ class Form extends Component {
                 </form>
                 </div>
             </div>
-            <div className="form">
-                <h1 className="form_title">Add your Movie</h1>
-                <div className="form_content"> 
-                <input type="text"  placeholder='Add your movie'/>
-                <input type="text"  placeholder='Add your movie'/>
-                <button className="button" type="button">Add Movie</button>
-                </div>
-            </div>
         </section>
+    </div>
         </>
         );
     }

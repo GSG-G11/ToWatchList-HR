@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 .header{
   display: flex;
 }
@@ -23,7 +22,7 @@ code {
   margin: 0 auto;
   width: 40%;
   padding:20px;
-  background-color: rgba(32, 32, 32, 0.356);
+  background-color: rgba(233, 12, 12, 0.356);
 }
 
 
@@ -65,5 +64,4 @@ input[type=text] {
   font-size: 16px;
   background-color: black; 
 }
-
 
