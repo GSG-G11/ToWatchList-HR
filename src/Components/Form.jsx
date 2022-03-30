@@ -27,7 +27,7 @@ class Form extends Component {
     render() {
 
         return (
-<><ToastContainer />
+    <><ToastContainer />
         <section className="header">
             <div className="form">
                 <h1 className="form_title">Add your Movie</h1>
