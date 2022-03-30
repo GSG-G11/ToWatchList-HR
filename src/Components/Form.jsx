@@ -1,7 +1,8 @@
 import {Component} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import movies from '../movies';
+import '../css/Form.css';
+
 
 class Form extends Component {
     state = {
@@ -30,9 +31,9 @@ class Form extends Component {
     <><ToastContainer />
         <section className="header">
             <div className="form">
-                <h1 className="form_title">Add your Movie</h1>
+                <h1 className="form_title">Add Your Movie !!</h1>
                 <div className="form_content"> 
-                <form method="get" onSubmit={this.submitHandler.bind(this)}>
+                <form className="form-decoration" method="get" onSubmit={this.submitHandler.bind(this)} >
                 <input type="text" name="title" placeholder='Add your movie' onChange={this.inputHandler.bind(this)}/>
                 <button className="button" type="submit">Add Movie</button>
                 </form>
