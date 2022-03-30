@@ -1,13 +1,12 @@
 import '../css/CardList.css';
-import ToWatchCard from './ToWatchCard';
-import movies from '../movies.js'
+import Card from './Card';
 
-function ToWatch () {
+const ToWatch = ({moviesList, change}) => {
   return (
-      <div className="left-card-side">
-        <h3>To Watch</h3>
-        {movies.map(element => (<ToWatchCard key={element.title} title={element.title} status={element.status}/>))}
-      </div>
+    <div className="card-side">
+    <h3>To Watch</h3>
+    {moviesList.filter(data => data.status === true).map(element => ( < Card key={element.title} change={change} title={element.title} status={element.status}/> ) )}
+  </div>
   );
 };
 
