@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import Form from './Components/Form';
 
+
+
 class App extends React.Component{
 
   state ={
     movies:[{
       "title":"Adam's Project",
-      status:true}]
+      status:true
+    }]
   }
 
   AddMovie = (movie) =>{
