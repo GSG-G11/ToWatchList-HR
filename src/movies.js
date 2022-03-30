@@ -1,11 +1,11 @@
 const movies = [
   {
     title: 'The Hunger Games',
-    status : true,
+    status: true,
   },
   {
     title: 'The Hunger Games2',
-    status : false,
+    status: false,
   },
 ]
 export default movies;
