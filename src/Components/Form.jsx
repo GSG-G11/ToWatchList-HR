@@ -28,7 +28,28 @@ class Form extends Component {
 
         return (
         <><ToastContainer />
-    <div className="modal">
+
+<div className="card-list">
+        <div className="left-card-side">
+          <h3>To Watch</h3>
+          <div className="card">
+            <label>   <input name={movies[0].title} type="checkbox" onChange={this.setChecked} /> {movies[0].title} </label>
+          </div>
+          <div className="card">
+            <label>   <input  name={movies[1].title}type="checkbox" onChange={this.setChecked} /> {movies[1].title} </label>
+          </div>
+        </div>
+
+        {/* <ToWatch /> */}
+        <div className="left-card-side">
+        <h3>Finished</h3>
+        <div className="card">
+            <label> <input type="checkbox" name="" /> title of the movie</label>
+          </div>
+        </div>
+      </div>
+      
+    {/* <div className="modal">
         <section className="header">
             <div className="form">
                 <h1 className="form_title">Add your Movie</h1>
@@ -40,7 +61,7 @@ class Form extends Component {
                 </div>
             </div>
         </section>
-    </div>
+    </div> */}
         </>
         );
     }
