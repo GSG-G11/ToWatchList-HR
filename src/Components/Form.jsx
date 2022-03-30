@@ -17,7 +17,7 @@ class Form extends Component {
         event.preventDefault();
         const {title} = this.state.movie;
         if(title){
-            movies.push(this.state.movie);
+            this.props.movie(this.state.movie);
             toast.success(title +' has been added to the library');
         }else{
             toast.error('Please make sure your input is correct');
