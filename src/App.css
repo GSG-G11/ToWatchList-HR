@@ -6,5 +6,8 @@
 
 body {
   background-color: #121212;
-
+  background-image: url("../public/img/tyson-moultrie-BQTHOGNHo08-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto Slab', serif;
 }
