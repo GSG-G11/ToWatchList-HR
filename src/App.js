@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Form from './Components/Form';
 
 function App() {
   return (
     <React.Fragment>
-      <div>Start From here </div>
+      <Form />
     </React.Fragment>
   );
 }
