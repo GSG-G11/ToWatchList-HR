@@ -30,7 +30,14 @@
   background-color: #ebebeb;
   padding: 10px;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+    flex-direction: row;
 }
-.headers{
+.headers {
   font-weight: 400;
+}
+.delete {
+  font-size: 25px;
+  color: #7c0101;
 }

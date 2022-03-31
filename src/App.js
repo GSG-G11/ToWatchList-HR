@@ -22,16 +22,23 @@ class App extends React.Component {
   }
 
   setHandelChange = (event) => {
-    let movies = [...this.state.movies];  
+    let movies = [...this.state.movies];
     let index = movies.findIndex(el => el.title === event.target.name);
-    movies[index].status = event.target.checked;                  
-    this.setState({ movies }); 
+    movies[index].status = event.target.checked;
+    this.setState({ movies });
   };
+
+  deleteItem = (event) => {
+    let moviesCopy = [...this.state.movies];
+   const  movies = moviesCopy.filter(item => item.title !== event);
+    this.setState({ movies });
+  };
+
   render() {
     return (
       <React.Fragment>
         <Form movie={this.AddMovie} />
-        < CardList movies={this.state.movies} change={this.setHandelChange}/>
+        < CardList movies={this.state.movies} change={this.setHandelChange} deleteItem={this.deleteItem}/>
       </React.Fragment>
     );
   }
